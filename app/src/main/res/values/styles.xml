@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores personalizados -->
+    <color name="background_color">#4B0076</color>
+    <color name="button_color">#FFFFFF</color>
+    <color name="button_background_color">#FF4081</color>
+    <color name="input_background_color">#FFFFFF</color>
+    <color name="input_text_color">#000000</color>
+    <color name="hint_text_color">#BDBDBD</color>
+    <color name="text_color">#FFFFFF</color>
+
+    <!-- Tamaños de texto -->
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+
+    <!-- Márgenes y padding -->
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+</resources>

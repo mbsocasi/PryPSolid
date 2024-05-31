@@ -1,10 +1,253 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".index">
+    android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/background_gradient"
+        app:title="Tienda"
+        app:titleTextColor="#FFFFFF"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Botón de compra -->
+        <Button
+            android:id="@+id/btn_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_button"
+            android:text="Cart"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Producto 1 -->
+    <ImageView
+        android:id="@+id/image_product_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/acer"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/image_product_2"
+        app:layout_constraintDimensionRatio="H,16:9"/>
+
+    <TextView
+        android:id="@+id/text_product_name_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Acer Nitro"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/image_product_1"
+        app:layout_constraintStart_toStartOf="@id/image_product_1"
+        app:layout_constraintEnd_toEndOf="@id/image_product_1"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/text_product_price_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="$999.99"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/text_product_name_1"
+        app:layout_constraintStart_toStartOf="@id/image_product_1"
+        app:layout_constraintEnd_toEndOf="@id/image_product_1"
+        android:padding="8dp"/>
+
+    <!-- Producto 2 -->
+    <ImageView
+        android:id="@+id/image_product_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/idea"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toEndOf="@id/image_product_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="H,16:9"/>
+
+    <TextView
+        android:id="@+id/text_product_name_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="IdeaPad"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/image_product_2"
+        app:layout_constraintStart_toStartOf="@id/image_product_2"
+        app:layout_constraintEnd_toEndOf="@id/image_product_2"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/text_product_price_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="$796.99"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/text_product_name_2"
+        app:layout_constraintStart_toStartOf="@id/image_product_2"
+        app:layout_constraintEnd_toEndOf="@id/image_product_2"
+        android:padding="8dp"/>
+
+     <!-- Producto 3 -->
+    <ImageView
+        android:id="@+id/image_product_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/miet"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/text_product_price_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/image_product_4"
+        app:layout_constraintDimensionRatio="H,16:9"/>
+
+    <TextView
+        android:id="@+id/text_product_name_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="MSI Gaming"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/image_product_3"
+        app:layout_constraintStart_toStartOf="@id/image_product_3"
+        app:layout_constraintEnd_toEndOf="@id/image_product_3"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/text_product_price_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="$1559.99"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/text_product_name_3"
+        app:layout_constraintStart_toStartOf="@id/image_product_3"
+        app:layout_constraintEnd_toEndOf="@id/image_product_3"
+        android:padding="8dp"/>
+
+    <!-- Producto 4 -->
+    <ImageView
+        android:id="@+id/image_product_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/razer"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/text_product_price_1"
+        app:layout_constraintStart_toEndOf="@id/image_product_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="H,16:9"/>
+
+    <TextView
+        android:id="@+id/text_product_name_4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="RAZER G5"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/image_product_4"
+        app:layout_constraintStart_toStartOf="@id/image_product_4"
+        app:layout_constraintEnd_toEndOf="@id/image_product_4"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/text_product_price_4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="$2000.99"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/text_product_name_4"
+        app:layout_constraintStart_toStartOf="@id/image_product_4"
+        app:layout_constraintEnd_toEndOf="@id/image_product_4"
+        android:padding="8dp"/>
+
+    <!-- Producto 5 -->
+    <ImageView
+        android:id="@+id/image_product_5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/rog"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/text_product_price_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/image_product_6"
+        app:layout_constraintDimensionRatio="H,16:9"/>
+
+    <TextView
+        android:id="@+id/text_product_name_5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Rog Strix"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/image_product_5"
+        app:layout_constraintStart_toStartOf="@id/image_product_5"
+        app:layout_constraintEnd_toEndOf="@id/image_product_5"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/text_product_price_5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="$2279.99"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/text_product_name_5"
+        app:layout_constraintStart_toStartOf="@id/image_product_5"
+        app:layout_constraintEnd_toEndOf="@id/image_product_5"
+        android:padding="8dp"/>
+
+    <!-- Producto 6 -->
+    <ImageView
+        android:id="@+id/image_product_6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/tuf"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/text_product_price_3"
+        app:layout_constraintStart_toEndOf="@id/image_product_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="H,16:9"/>
+
+    <TextView
+        android:id="@+id/text_product_name_6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/image_product_6"
+        app:layout_constraintStart_toStartOf="@id/image_product_6"
+        app:layout_constraintEnd_toEndOf="@id/image_product_6"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/text_product_price_6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="$89.99"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/text_product_name_6"
+        app:layout_constraintStart_toStartOf="@id/image_product_6"
+        app:layout_constraintEnd_toEndOf="@id/image_product_6"
+        android:padding="8dp"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

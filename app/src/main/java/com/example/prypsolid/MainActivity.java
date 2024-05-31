@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnLogin;
 
     private String user="admin";
-    private String pass="Doris";
+    private String pass="admin";
 
     @SuppressLint("MissingInflatedId")
 
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         txtUsuario = findViewById(R.id.et_user);
         txtContrasenia = findViewById(R.id.et_pass);
-        btnLogin = findViewById(R.id.tn_login);
+        btnLogin = findViewById(R.id.btn_login);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
